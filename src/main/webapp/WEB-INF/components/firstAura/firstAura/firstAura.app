@@ -1,3 +1,4 @@
 <aura:application>
-hello web, from the Aura sample app firstAura
+<h1>First Aura application</h1>
+<firstAura:hello />
 </aura:application>
