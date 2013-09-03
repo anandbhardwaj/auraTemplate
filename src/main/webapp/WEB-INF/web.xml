@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2013, salesforce.com, inc.
+  All rights reserved.
+ 
+  Redistribution and use in source and binary forms, with or without modification, are permitted provided
+  that the following conditions are met:
+ 
+     Redistributions of source code must retain the above copyright notice, this list of conditions and the
+     following disclaimer.
+ 
+     Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
+     the following disclaimer in the documentation and/or other materials provided with the distribution.
+ 
+     Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or
+     promote products derived from this software without specific prior written permission.
+ 
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+  ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+  TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+  HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+-->
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>AuraContextFilter</filter-name>
+		<filter-class>org.auraframework.http.AuraContextFilter</filter-class>
+		<init-param>
+			<param-name>componentDir</param-name>
+			<param-value>/WEB-INF/components</param-value>
+		</init-param>
+	</filter>
+
+	<!-- Begin Aura Servlet -->
+
+	<filter>
+		<filter-name>AuraRewriteFilter</filter-name>
+		<filter-class>org.auraframework.http.AuraRewriteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<url-pattern>*.cmp</url-pattern>
+		<filter-name>AuraRewriteFilter</filter-name>
+	</filter-mapping>
+
+	<filter-mapping>
+		<url-pattern>*.app</url-pattern>
+		<filter-name>AuraRewriteFilter</filter-name>
+	</filter-mapping>
+
+
+	<servlet>
+		<servlet-name>AuraServlet</servlet-name>
+		<servlet-class>org.auraframework.http.AuraServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<filter-mapping>
+		<filter-name>AuraContextFilter</filter-name>
+		<url-pattern>/aura</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuraServlet</servlet-name>
+		<url-pattern>/aura</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Begin Aura ResourceServlet -->
+
+	<filter>
+		<filter-name>AuraResourceRewriteFilter</filter-name>
+		<filter-class>org.auraframework.http.AuraResourceRewriteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<url-pattern>/l/*</url-pattern>
+		<filter-name>AuraResourceRewriteFilter</filter-name>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>AuraResourceServlet</servlet-name>
+		<servlet-class>org.auraframework.http.AuraResourceServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<filter-mapping>
+		<filter-name>AuraContextFilter</filter-name>
+		<url-pattern>/auraResource</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuraResourceServlet</servlet-name>
+		<url-pattern>/auraResource</url-pattern>
+	</servlet-mapping>
+
+	<!-- Begin Aura Framework Servlet -->
+	<servlet>
+		<servlet-name>AuraFrameworkServlet</servlet-name>
+		<servlet-class>org.auraframework.http.AuraFrameworkServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<filter>
+		<filter-name>CompressingFilter</filter-name>
+		<filter-class>com.planetj.servlet.filter.compression.CompressingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CompressingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AuraFrameworkServlet</servlet-name>
+		<url-pattern>/auraFW/*</url-pattern>
+	</servlet-mapping>
+</web-app>
