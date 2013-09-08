@@ -2,7 +2,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.force.aus</groupId>
-<<<<<<< HEAD
 	<artifactId>auraTemplate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Aura Template (embedded tomcat)</name>
@@ -11,23 +10,7 @@
 		<tomcat.version>7.0.34</tomcat.version>
 		<aura.version>0.314-SNAPSHOT</aura.version>
 	</properties>
-	<repositories><!-- <repository> <id>libs-internal</id> <url>http://maven.auraframework.org/libs-release</url> 
-			</repository> -->
-=======
-	<artifactId>embeddedTomcatSample</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>embeddedTomcatSample Maven Webapp</name>
-	<url>http://maven.apache.org</url>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<tomcat.version>7.0.34</tomcat.version>
-	</properties>
 	<repositories>
-		<repository>
-			<id>libs-internal</id>
-			<url>http://maven.auraframework.org/libs-release</url>
-		</repository>
->>>>>>> d934bcf4ad8dbac40ae4ab95ef93e68ff8266b60
 		<repository>
 			<id>libs</id>
 			<url>http://repo.auraframework.org/libs-release</url>
@@ -68,7 +51,6 @@
 			<artifactId>tomcat-jsp-api</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
-<<<<<<< HEAD
 		<dependency>
 			<groupId>org.auraframework</groupId>
 			<artifactId>aura-util</artifactId>
@@ -83,6 +65,12 @@
 			<groupId>org.auraframework</groupId>
 			<artifactId>aura-impl</artifactId>
 			<version>${aura.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-nop</artifactId>
+				</exclusion>
+			</exclusions>			
 		</dependency>
 		<dependency>
 			<groupId>org.auraframework</groupId>
@@ -98,7 +86,7 @@
 			<groupId>net.sourceforge.pjl-comp-filter</groupId>
 			<artifactId>pjl-comp-filter</artifactId>
 			<version>1.7</version>
-		</dependency>
+		</dependency><!--  
 		<dependency>
 			<groupId>com.google.collections</groupId>
 			<artifactId>google-collections</artifactId>
@@ -113,62 +101,13 @@
 			<groupId>com.google.javascript</groupId>
 			<artifactId>closure-compiler</artifactId>
 			<version>v20130722</version>
-		</dependency>
-		<!-- Logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.2</version>
-		</dependency>
-=======
-        <dependency>
-            <groupId>org.auraframework</groupId>
-            <artifactId>aura-util</artifactId>
-            <version>0.282</version>
-        </dependency>
-        <dependency>
-            <groupId>org.auraframework</groupId>
-            <artifactId>aura</artifactId>
-            <version>0.282</version>
-        </dependency>
-        <dependency>
-            <groupId>org.auraframework</groupId>
-            <artifactId>aura-impl</artifactId>
-            <version>0.282</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>slf4j-nop</artifactId>
-				</exclusion>
-			</exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.auraframework</groupId>
-            <artifactId>aura-impl-expression</artifactId>
-            <version>0.282</version>
-        </dependency>
-        <dependency>
-            <groupId>org.auraframework</groupId>
-            <artifactId>aura-resources</artifactId>
-            <version>0.282</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.pjl-comp-filter</groupId>
-            <artifactId>pjl-comp-filter</artifactId>
-            <version>1.7</version>
-        </dependency>	
+		</dependency>-->
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
 			<version>1.7.2</version>
-		</dependency>	
->>>>>>> d934bcf4ad8dbac40ae4ab95ef93e68ff8266b60
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>embeddedTomcatSample</finalName>
@@ -182,16 +121,10 @@
 					<programs>
 						<program>
 							<mainClass>com.force.aus.Main</mainClass>
-<<<<<<< HEAD
 							<name>webapp</name>							
 						</program>
 					</programs>
 					<extraJvmArguments>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</extraJvmArguments>
-=======
-							<name>webapp</name>
-						</program>
-					</programs>
->>>>>>> d934bcf4ad8dbac40ae4ab95ef93e68ff8266b60
 				</configuration>
 				<executions>
 					<execution>
