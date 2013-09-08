@@ -8,7 +8,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<tomcat.version>7.0.34</tomcat.version>
-		<aura.version>0.282</aura.version>
+		<aura.version>0.314-SNAPSHOT</aura.version>
 	</properties>
 	<repositories><!-- <repository> <id>libs-internal</id> <url>http://maven.auraframework.org/libs-release</url> 
 			</repository> -->
@@ -121,9 +121,10 @@
 					<programs>
 						<program>
 							<mainClass>com.force.aus.Main</mainClass>
-							<name>webapp</name>
+							<name>webapp</name>							
 						</program>
 					</programs>
+					<extraJvmArguments>-Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true</extraJvmArguments>
 				</configuration>
 				<executions>
 					<execution>
