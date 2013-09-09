@@ -1,0 +1,14 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sat Sep 07 00:35:02 EST 2013
+default-http\://maven.auraframework.org/libs-snapshot/.lastUpdated=1378478101657
+http\://repo.jfrog.org/artifactory/libs-releases/.lastUpdated=1378478100715
+http\://repo.phloc.com/maven2/.lastUpdated=1378478101634
+http\://repo.phloc.com/maven2/.error=
+http\://repo.auraframework.org/chromedriver/.lastUpdated=1378478102102
+http\://repo.jfrog.org/artifactory/libs-releases/.error=
+http\://jsdoctk-plugin.googlecode.com/svn/repo/.error=
+http\://maven.auraframework.org/jenkins-build-artifacts/.error=Could not transfer artifact org.auraframework\:aura-impl\:jar\:0.312-SNAPSHOT from/to maven.auraframework.org-jenkins-build-artifacts (http\://maven.auraframework.org/jenkins-build-artifacts)\: maven.auraframework.org
+http\://maven.auraframework.org/libs-snapshot/.error=Could not transfer artifact org.auraframework\:aura-impl\:jar\:0.312-SNAPSHOT from/to maven.auraframework.org-releases-snapshots (http\://maven.auraframework.org/libs-snapshot)\: maven.auraframework.org
+http\://repo.auraframework.org/chromedriver/.error=
+default-http\://maven.auraframework.org/jenkins-build-artifacts/.lastUpdated=1378478101645
+http\://jsdoctk-plugin.googlecode.com/svn/repo/.lastUpdated=1378478099946

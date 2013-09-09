@@ -1,0 +1,12 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sat Sep 07 00:35:44 EST 2013
+http\://repo.phloc.com/maven2/.lastUpdated=1378478144642
+http\://repo.phloc.com/maven2/.error=
+http\://repo.maven.apache.org/maven2/.lastUpdated=1378478144933
+default-http\://maven.auraframework.org/libs-release/.lastUpdated=1378478142480
+http\://maven.auraframework.org/libs-release/.error=Could not transfer artifact org.auraframework\:aura-resources\:pom\:0.312 from/to libs-internal (http\://maven.auraframework.org/libs-release)\: null to http\://maven.auraframework.org/libs-release/org/auraframework/aura-resources/0.312/aura-resources-0.312.pom
+http\://repo.maven.apache.org/maven2/.error=
+http\://repo.auraframework.org/libs-release/.lastUpdated=1378478143720
+http\://repo1.maven.org/maven2/.lastUpdated=1378478144930
+http\://repo1.maven.org/maven2/.error=
+http\://repo.auraframework.org/libs-release/.error=

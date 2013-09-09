@@ -1,0 +1,12 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sat Sep 07 09:05:50 EST 2013
+http\://repo.phloc.com/maven2/.lastUpdated=1378478172905
+http\://repo.phloc.com/maven2/.error=
+http\://repo.maven.apache.org/maven2/.lastUpdated=1378478174449
+default-http\://maven.auraframework.org/libs-release/.lastUpdated=1378508750316
+http\://maven.auraframework.org/libs-release/.error=Could not transfer artifact org.auraframework\:aura-util\:pom\:0.22 from/to libs-internal (http\://maven.auraframework.org/libs-release)\: Error transferring file\: maven.auraframework.org
+http\://repo.maven.apache.org/maven2/.error=
+http\://repo.auraframework.org/libs-release/.lastUpdated=1378478171983
+http\://repo1.maven.org/maven2/.lastUpdated=1378478180899
+http\://repo1.maven.org/maven2/.error=
+http\://repo.auraframework.org/libs-release/.error=

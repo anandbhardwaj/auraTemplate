@@ -1,0 +1,12 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Sat Sep 07 00:15:11 EST 2013
+http\://repo.phloc.com/maven2/.lastUpdated=1378476899669
+http\://repo.phloc.com/maven2/.error=
+http\://repo.maven.apache.org/maven2/.lastUpdated=1378476900098
+default-http\://maven.auraframework.org/libs-release/.lastUpdated=1378476911079
+http\://maven.auraframework.org/libs-release/.error=Could not transfer artifact org.auraframework\:aura\:jar\:0.99 from/to libs-internal (http\://maven.auraframework.org/libs-release)\: Error transferring file\: maven.auraframework.org
+http\://repo.maven.apache.org/maven2/.error=
+http\://repo.auraframework.org/libs-release/.lastUpdated=1378476898749
+http\://repo1.maven.org/maven2/.error=
+http\://repo1.maven.org/maven2/.lastUpdated=1378476911170
+http\://repo.auraframework.org/libs-release/.error=

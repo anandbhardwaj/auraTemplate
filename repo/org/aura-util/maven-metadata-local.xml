@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.auraframework</groupId>
+  <artifactId>aura-util</artifactId>
+  <versioning>
+    <versions>
+      <version>0.312-SNAPSHOT</version>
+      <version>0.314-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20130908221111</lastUpdated>
+  </versioning>
+</metadata>
