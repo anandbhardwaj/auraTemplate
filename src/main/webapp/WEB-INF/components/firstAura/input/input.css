@@ -1,0 +1,13 @@
+.THIS{
+	padding-top: 20px;
+}
+
+.THIS.uiBlock .bLeft { 
+	border:1px solid blue;	
+}
+.THIS.uiBlock .bRight { 
+	border:1px solid blue;	
+}
+.THIS.uiBlock .bBody {
+	border:1px solid green;
+}

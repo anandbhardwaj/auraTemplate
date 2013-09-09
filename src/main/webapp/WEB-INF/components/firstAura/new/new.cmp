@@ -1,3 +1,14 @@
-<aura:component>
-    TODO: firstAura:new
+<aura:component model="java://com.force.aus.model.SimpleObject">
+	<aura:attribute name="local" type="String" default="Set this attribute"/>
+	<aura:registerevent name="componentEventFired" type="firstAura:cmpEvent"/>
+	<div class="container">
+		<h2>The Attributes</h2>
+    	<ul>
+    		<li>Browser - {!$Browser.formFactor}</li>
+    		<li>Local - {!v.local}</li>
+    		<li>From Model - {!m.simple}</li>
+    		<li><ui:button label="Component Event" press="{!c.fireComponentEvent}"/></li>
+    		<li><ui:button label="Application Event" press="{!c.fireApplicationEvent}"/></li>
+    	</ul>
+    </div>
 </aura:component>

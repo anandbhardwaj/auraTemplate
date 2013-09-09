@@ -1,0 +1,38 @@
+<aura:component>
+
+    	<h1>Example Input</h1>
+    	<ui:block>
+    		<aura:set attribute="left">Check Box</aura:set>
+    		<aura:set attribute="right"><ui:inputCheckbox name="checkbox" value="false"/></aura:set>
+    	</ui:block>
+    	<ui:block>
+    		<aura:set attribute="left">Currency</aura:set>
+    		<aura:set attribute="right"><ui:inputCurrency/></aura:set>
+    	</ui:block> 
+    	<ui:block>
+    		<aura:set attribute="left">Date</aura:set>
+    		<aura:set attribute="right"><ui:inputDate/></aura:set>
+    	</ui:block>  
+    	<ui:block>
+    		<aura:set attribute="left">Radio</aura:set>
+    		<aura:set attribute="right"><ui:inputRadio/></aura:set>
+    	</ui:block>  
+    	<ui:block>
+    		<aura:set attribute="left">Select</aura:set>
+    		<aura:set attribute="right">
+    			<ui:inputSelect>
+    				<ui:inputSelectOptionGroup label="Group 1">
+        				<ui:inputSelectOption text="Red"/>
+        				<ui:inputSelectOption text="Green" value="true"/>
+        				<ui:inputSelectOption text="Blue"/>
+    				</ui:inputSelectOptionGroup>
+    				<ui:inputSelectOptionGroup label="Group 2">
+        				<ui:inputSelectOption text="Cyan"/>
+        				<ui:inputSelectOption text="Magenta"/>
+        				<ui:inputSelectOption text="Yellow"/>
+    				</ui:inputSelectOptionGroup>
+    			</ui:inputSelect>
+    		</aura:set>
+    	</ui:block>      	
+
+</aura:component>

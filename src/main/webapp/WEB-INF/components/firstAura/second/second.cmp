@@ -1,0 +1,12 @@
+<aura:component>
+    <aura:attribute name="eventType" type="String" default="Listening"/>
+    <aura:attribute name="numberCompEvents" type="Integer" default="0"/>
+    <aura:attribute name="numberAppEvents" type="Integer" default="0"/>
+    <aura:handler event="firstAura:appEvent" action="{!c.handleTheEvents}"/>
+    <h2>Listening for Events</h2>
+    //TODO - fix the component event (needs to rethink the whole app!)<br />
+    Last Event = {!v.eventType}<br />
+    Number Component Events = {!v.numberCompEvents} <br />
+    Number Application Events = {!v.numberAppEvents}
+
+</aura:component>

@@ -1,4 +1,7 @@
-.THIS{
-	background-color: red;
+.THIS.container{
 	font-weight: bold;
+}
+
+.THIS.value {
+	color : grey;
 }
