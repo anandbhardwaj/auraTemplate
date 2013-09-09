@@ -7,4 +7,4 @@ MAVEN_REPO=~/.m2/repository
 
 AURA_DIR=$MAVEN_REPO/org/auraframework
 
-cp -rf $AURA_DIR repo/org
+cp -rf $AURA_DIR repo/org/auraframework
